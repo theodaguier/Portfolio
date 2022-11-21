@@ -1,0 +1,25 @@
+.dock-container {
+  height: 64px;
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 8px 2px;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  /* Background-blur/96 */
+
+  backdrop-filter: blur(48px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  transition: 0.2s;
+}

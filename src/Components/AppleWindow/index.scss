@@ -1,0 +1,173 @@
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  src: url('../../assets/font/SF-Pro-Text-Regular.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Text Bold';
+  font-weight: 400;
+  src: url('../../assets/font/SF-Pro-Text-Bold.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Medium';
+  font-weight: 500;
+  src: url('../../assets/font/SF-Pro-Display-Medium.otf');
+}
+
+.active {
+  display: block;
+}
+
+.apple-window-container {
+  position: absolute;
+  top: 45px;
+  left: 30px;
+  width: 80%;
+  height: 80vh;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5),
+    inset -0.5px -0.5px 1px #78797a, inset 0.5px 0.5px 1px #78797a;
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.15))
+    drop-shadow(0px 25px 30px rgba(0, 0, 0, 0.35));
+  border-radius: 10px;
+  .sidebar {
+    /* Sidebar */
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    background: rgba(40, 40, 40, 0.75);
+    backdrop-filter: blur(40px);
+    border-radius: 10px 0 0 10px;
+    /* Note: backdrop-filter has minimal browser support */
+    .traffic-lights {
+      width: 100%;
+      height: 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 20px;
+      border-radius: 10px 0 0 0;
+      div {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+      .red {
+        background: #ed6a5f;
+        cursor: pointer;
+      }
+      .orange {
+        background: #f5bf4f;
+        cursor: pointer;
+      }
+      .green {
+        background: #61c554;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.work {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: middle;
+}
+
+.sidebar-title {
+  font-family: 'SF Pro Text Bold';
+  color: #ebebf5;
+  font-size: 11px;
+  padding-left: 12px;
+  padding-top: 20px;
+}
+
+.sidebar-project {
+  padding-left: 7px;
+  padding-top: 12px;
+  .project-name {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 17px;
+    .menubar {
+      width: 16px;
+      height: 16px;
+    }
+    .project-title {
+      font-family: 'SF Pro Display Medium';
+      font-size: 14px;
+      padding-left: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
+.window-frame {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  left: 20%;
+  padding-top: 14px;
+  padding-left: 22px;
+  background: #1e1e1e;
+  border-radius: 0 10px 10px 0;
+  p {
+    font-size: 13px;
+  }
+}
+
+.icon-skill {
+  width: 36px;
+  height: 36px;
+  img {
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+.web,
+.soft,
+.vers {
+  margin-top: 23px;
+}
+
+.cat-title {
+  font-family: 'SF Pro Text Bold';
+}
+
+.skill-cat {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  .skill {
+    width: 50%;
+  }
+  .skill-content {
+    display: flex;
+    .icon-content {
+      width: 42px;
+      height: 42px;
+      border-radius: 7px;
+      img {
+        width: 42px;
+        height: 42px;
+        object-fit: cover;
+        border-radius: 7px;
+      }
+    }
+    .skill-name {
+      width: 246px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin-left: 13px;
+    }
+  }
+  .w {
+    margin-bottom: 9px;
+  }
+}

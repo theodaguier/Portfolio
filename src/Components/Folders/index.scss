@@ -1,0 +1,24 @@
+.folder-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  margin-top: calc(24px + 13px);
+  cursor: pointer;
+  .folder {
+    width: 100px;
+    margin-bottom: 20px;
+    .folder-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 13px;
+    }
+  }
+}
+
+.i-folder {
+  width: 48px;
+  height: 48px;
+}
