@@ -96,7 +96,6 @@
     flex-direction: row;
     padding-bottom: 17px;
     .menubar {
-      width: 16px;
       height: 16px;
     }
     .project-title {
@@ -169,5 +168,121 @@
   }
   .w {
     margin-bottom: 9px;
+  }
+}
+
+// Notes About
+
+.note {
+  font-size: 11px;
+}
+
+.notes {
+  padding: 0;
+}
+
+.notes-container {
+  width: 100%;
+  display: flex;
+  .col-left {
+    width: 225px;
+  }
+  .col-right {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.tab {
+  width: 100%;
+  height: 49px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.icons {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .left {
+    display: flex;
+  }
+  .right {
+    display: flex;
+  }
+  .list {
+    padding-right: 16px;
+  }
+  .icon-notes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+}
+
+.notes-container {
+  display: flex;
+
+  padding-left: 8px;
+  padding-right: 8px;
+  .notes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px 10px 20px;
+    gap: 2px;
+    width: 208px;
+    height: 49px;
+    border-radius: 7px;
+    .text-title {
+      font-family: 'SF Pro Text Bold';
+      font-size: 11px;
+    }
+    .resume {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.55);
+      .hours {
+        color: white;
+      }
+    }
+  }
+  .active {
+    background: #464646;
+  }
+}
+
+.text-area {
+  width: 100%;
+  height: auto;
+  font-family: 'SF Pro Text';
+  font-size: 11px;
+  padding-left: 20px;
+  padding-right: 20px;
+  [contenteditable] {
+    outline: 0px solid transparent;
+  }
+  .date-note {
+    font-family: 'SF Pro Text';
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0.12px;
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .text {
+    width: 100%;
+    height: auto;
+    font-family: 'SF Pro Text';
+    font-size: 11px;
+    padding-top: 12px;
+  }
+  .underline {
+    text-decoration: underline;
+    margin-bottom: 10px;
   }
 }

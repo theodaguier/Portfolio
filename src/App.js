@@ -5,6 +5,8 @@ import Background from './assets/img/mac-os-background.jpg';
 import Dock from './Components/Dock';
 import Folders from './Components/Folders';
 import CompetencesWindow from './Components/AppleWindow/Compétences';
+import FormationWindow from './Components/AppleWindow/Formations';
+import AboutWindow from './Components/AppleWindow/A_propos';
 
 var backgroundImage = {
   width: '100%',
@@ -17,23 +19,39 @@ var backgroundImage = {
 };
 
 function App() {
-  const [isActive, setActive] = useState(true);
-
-  function toggleClass() {
-    setActive(!isActive);
-  }
+  const [CompetencesIsActive, CompetencesSetActive] = useState(true);
+  const [FormationsIsActive, FormationsSetActive] = useState(true);
+  const [NoteIsActive, NoteSetActive] = useState(true);
 
   return (
     <div className="App">
       <Statusbar />
       <div className="container" style={backgroundImage}>
         <Folders
-          isActive={isActive}
-          setActive={setActive}
-          onClick={() => toggleClass()}
+          CompetencesIsActive={CompetencesIsActive}
+          CompetencesSetActive={CompetencesSetActive}
+          FormationsIsActive={FormationsIsActive}
+          FormationsSetActive={FormationsSetActive}
+          NoteIsActive={NoteIsActive}
+          NoteSetActive={NoteSetActive}
         />
-        {!isActive && (
-          <CompetencesWindow isActive={isActive} setActive={setActive} />
+        {!CompetencesIsActive && (
+          <CompetencesWindow
+            CompetencesIsActive={CompetencesIsActive}
+            CompetencesSetActive={CompetencesSetActive}
+          />
+        )}
+        {!FormationsIsActive && (
+          <FormationWindow
+            FormationsIsActive={FormationsIsActive}
+            FormationsSetActive={FormationsSetActive}
+          />
+        )}
+        {!NoteIsActive && (
+          <AboutWindow
+            NoteIsActive={NoteIsActive}
+            NoteSetActive={NoteSetActive}
+          />
         )}
       </div>
       <Dock />

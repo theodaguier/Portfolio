@@ -11,9 +11,9 @@ const formations = [
   },
 ];
 
-function CompetencesWindow({ isActive, setActive }) {
+function FormationWindow({ FormationsIsActive, FormationsSetActive }) {
   const toggleClass = () => {
-    setActive(!isActive);
+    FormationsSetActive(!FormationsIsActive);
   };
   function SkillRow({ skill }) {
     return (
@@ -66,4 +66,4 @@ function CompetencesWindow({ isActive, setActive }) {
   );
 }
 
-export default CompetencesWindow;
+export default FormationWindow;

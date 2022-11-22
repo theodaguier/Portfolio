@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../index.css';
-import Hammer from './Icon/hammer.png';
+import SideBar from '../SideBar';
 
 const devIos = [
   {
@@ -73,42 +73,13 @@ const software = [
   },
 ];
 
-function CompetencesWindow({ skills, isActive, setActive }) {
-  const toggleClass = () => {
-    setActive(!isActive);
-  };
-  function SkillRow({ skill }) {
-    return (
-      <div className="col">
-        <div>
-          <img classname="icon" src={skill.img} alt="icon" />
-        </div>
-        <div>
-          <p className="skill-name">{skill.name}</p>
-        </div>
-      </div>
-    );
-  }
-
+function CompetencesWindow({ CompetencesIsActive, CompetencesSetActive }) {
   return (
-    <div className={`apple-window-container`}>
-      <div className="sidebar">
-        <div className="traffic-lights">
-          <div className="red" onClick={toggleClass}></div>
-          <div className="orange"></div>
-          <div className="green"></div>
-        </div>
-        <div className="sidebar-menu">
-          <div className="sidebar-title">
-            <div className="sidebar-project">
-              <div className="project-name">
-                <img className="menubar" src={Hammer} alt="menubar-icon" />
-                <p className="project-title">Compétences</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="apple-window-container">
+      <SideBar
+        CompetencesIsActive={CompetencesIsActive}
+        CompetencesSetActive={CompetencesSetActive}
+      />
       <div className="window-frame">
         <p className="cat-title ios">Developpement ios</p>
         <div className="skill-cat">
