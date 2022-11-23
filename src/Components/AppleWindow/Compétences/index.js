@@ -75,64 +75,58 @@ const software = [
 
 function CompetencesWindow({ CompetencesIsActive, CompetencesSetActive }) {
   return (
-    <div className="apple-window-container">
-      <SideBar
-        CompetencesIsActive={CompetencesIsActive}
-        CompetencesSetActive={CompetencesSetActive}
-      />
-      <div className="window-frame">
-        <p className="cat-title ios">Developpement ios</p>
-        <div className="skill-cat">
-          {devIos.map((ios) => (
-            <div className="skill" id={ios.id}>
-              <div className="skill-content">
-                <div className="icon-content">
-                  <img src={ios.img} alt="icon" />
-                </div>
-                <p className="skill-name">{ios.name}</p>
+    <div>
+      <p className="cat-title ios">Developpement ios</p>
+      <div className="skill-cat">
+        {devIos.map((ios, index) => (
+          <div className="skill" key={index}>
+            <div className="skill-content">
+              <div className="icon-content">
+                <img src={ios.img} alt="icon" />
               </div>
+              <p className="skill-name">{ios.name}</p>
             </div>
-          ))}
-        </div>
-        <p className="cat-title web">Developpement Web</p>
-        <div className="skill-cat">
-          {devWeb.map((web) => (
-            <div className="skill" id={web.id}>
-              <div className="skill-content w">
-                <div className="icon-content">
-                  <img src={web.img} alt="icon" />
-                </div>
-                <p className="skill-name">{web.name}</p>
+          </div>
+        ))}
+      </div>
+      <p className="cat-title web">Developpement Web</p>
+      <div className="skill-cat">
+        {devWeb.map((web) => (
+          <div className="skill" id={web.id}>
+            <div className="skill-content w">
+              <div className="icon-content">
+                <img src={web.img} alt="icon" />
               </div>
+              <p className="skill-name">{web.name}</p>
             </div>
-          ))}
-        </div>
-        <p className="cat-title vers">Versioning</p>
-        <div className="skill-cat">
-          {versioning.map((vers) => (
-            <div className="skill" id={vers.id}>
-              <div className="skill-content">
-                <div className="icon-content">
-                  <img src={vers.img} alt="icon" />
-                </div>
-                <p className="skill-name">{vers.name}</p>
+          </div>
+        ))}
+      </div>
+      <p className="cat-title vers">Versioning</p>
+      <div className="skill-cat">
+        {versioning.map((vers) => (
+          <div className="skill" id={vers.id}>
+            <div className="skill-content">
+              <div className="icon-content">
+                <img src={vers.img} alt="icon" />
               </div>
+              <p className="skill-name">{vers.name}</p>
             </div>
-          ))}
-        </div>
-        <p className="cat-title soft">Software</p>
-        <div className="skill-cat">
-          {software.map((soft) => (
-            <div className="skill" id={soft.id}>
-              <div className="skill-content">
-                <div className="icon-content">
-                  <img src={soft.img} alt="icon" />
-                </div>
-                <p className="skill-name">{soft.name}</p>
+          </div>
+        ))}
+      </div>
+      <p className="cat-title soft">Software</p>
+      <div className="skill-cat">
+        {software.map((soft) => (
+          <div className="skill" id={soft.id}>
+            <div className="skill-content">
+              <div className="icon-content">
+                <img src={soft.img} alt="icon" />
               </div>
+              <p className="skill-name">{soft.name}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

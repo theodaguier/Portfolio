@@ -7,6 +7,7 @@ import Folders from './Components/Folders';
 import CompetencesWindow from './Components/AppleWindow/Compétences';
 import FormationWindow from './Components/AppleWindow/Formations';
 import AboutWindow from './Components/AppleWindow/A_propos';
+import AppleWindow from './Components/AppleWindow';
 
 var backgroundImage = {
   width: '100%',
@@ -23,6 +24,7 @@ function App() {
   const [FormationsIsActive, FormationsSetActive] = useState(true);
   const [NoteIsActive, NoteSetActive] = useState(true);
 
+
   return (
     <div className="App">
       <Statusbar />
@@ -35,6 +37,7 @@ function App() {
           NoteIsActive={NoteIsActive}
           NoteSetActive={NoteSetActive}
         />
+        <AppleWindow />
         {!CompetencesIsActive && (
           <CompetencesWindow
             CompetencesIsActive={CompetencesIsActive}

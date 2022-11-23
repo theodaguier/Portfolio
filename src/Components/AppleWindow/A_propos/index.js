@@ -19,25 +19,12 @@ const icons = [
   { id: 10, icon: './icons/search.png' },
 ];
 
-const texts = [
-  {
-    id: 1,
-    text: '',
-  },
-  { id: 2, text: 'caca' },
-];
-
 function AboutWindow({ NoteIsActive, NoteSetActive }) {
   const [text, setText] = useState(false);
 
   const toggle = () => {
     NoteSetActive(!NoteIsActive);
   };
-
-  // const changeText = () => {
-  //   setText(!text);
-  //   if()
-  // };
 
   return (
     <div className="apple-window-container">
