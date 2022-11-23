@@ -1,35 +1,18 @@
 import React from 'react';
 import './index.css';
 
-import FormationFoler from './Folder/FormationFolder';
+import FormationFolder from './Folder/FormationFolder';
 import CompetenceFolder from './Folder/CompetenceFolder';
 import AboutNote from './Folder/AboutNote';
+import WorkFolder from './Folder/WorkFolder';
 
-function Folders({
-  CompetencesIsActive,
-  CompetencesSetActive,
-  FormationsIsActive,
-  FormationsSetActive,
-  NoteIsActive,
-  NoteSetActive,
-  toggleTabs,
-  setToggleTabs,
-}) {
+function Folders({ toggleTabs, setToggleTabs, noteWindows, setNoteWindows }) {
   return (
     <div className="folder-container">
-      <FormationFoler
-        FormationsIsActive={FormationsIsActive}
-        FormationsSetActive={FormationsSetActive}
-        toggleTabs={toggleTabs}
-        setToggleTabs={setToggleTabs}
-      />
-      <CompetenceFolder
-        CompetencesIsActive={CompetencesIsActive}
-        CompetencesSetActive={CompetencesSetActive}
-        toggleTabs={toggleTabs}
-        setToggleTabs={setToggleTabs}
-      />
-      <AboutNote NoteIsActive={NoteIsActive} NoteSetActive={NoteSetActive} />
+      <FormationFolder toggleTabs={toggleTabs} setToggleTabs={setToggleTabs} />
+      <CompetenceFolder toggleTabs={toggleTabs} setToggleTabs={setToggleTabs} />
+      <WorkFolder toggleTabs={toggleTabs} setToggleTabs={setToggleTabs} />
+      <AboutNote noteWindows={noteWindows} setNoteWindows={setNoteWindows} />
     </div>
   );
 }

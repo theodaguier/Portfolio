@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../index.css';
-import Book from './Icon/book.png';
 
 const formations = [
   {
@@ -11,23 +10,7 @@ const formations = [
   },
 ];
 
-function FormationWindow({ FormationsIsActive, FormationsSetActive }) {
-  const toggleClass = () => {
-    FormationsSetActive(!FormationsIsActive);
-  };
-  function SkillRow({ skill }) {
-    return (
-      <div className="col">
-        <div>
-          <img classname="icon" src={skill.img} alt="icon" />
-        </div>
-        <div>
-          <p className="skill-name">{skill.name}</p>
-        </div>
-      </div>
-    );
-  }
-
+function FormationWindow() {
   return (
     <div>
       <p className="cat-title ios">Formations</p>

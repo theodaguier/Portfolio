@@ -45,14 +45,18 @@ function Dock() {
     };
   }, []);
   return (
-    <div className="dock-container">
-      {dockIcon.map((icon) => (
-        <div className="icon-container">
-          <div className="icon-image">
-            <img className="icon" src={icon.img} alt="icon" />
-          </div>
+    <div className="dock">
+      <div className="dock-container">
+        <div className="dock-c">
+          {dockIcon.map((icon, index) => (
+            <div className="icon-container" key={index}>
+              <div className="icon-image">
+                <img className="icon" src={icon.img} alt="icon" />
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 }

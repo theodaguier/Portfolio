@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import './index.css';
-import SideBar from './SideBar';
 import CompetencesWindow from './Compétences';
 import FormationWindow from './Formations';
+import WorkWindow from './Work';
 
-function Window({ toggleTabs, setToggleTabs }) {
+function Window({ toggleTabs }) {
   return (
     <div className="window-frame">
       {toggleTabs === 1 && <CompetencesWindow />}
       {toggleTabs === 2 && <FormationWindow />}
+      {toggleTabs === 4 && <WorkWindow />}
     </div>
   );
 }

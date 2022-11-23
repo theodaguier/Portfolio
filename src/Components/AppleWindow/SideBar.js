@@ -1,16 +1,7 @@
 import React from 'react';
 import Hammer from './Icon/hammer.png';
 
-export default function SideBar({
-  CompetencesIsActive,
-  CompetencesSetActive,
-  setToggleTabs,
-  toggleTabs,
-}) {
-  const toggle = () => {
-    CompetencesSetActive(!CompetencesIsActive);
-  };
-
+export default function SideBar({ setToggleTabs }) {
   const toggleTab = (index) => {
     setToggleTabs(index);
   };
@@ -18,7 +9,7 @@ export default function SideBar({
   return (
     <div className="sidebar">
       <div className="traffic-lights">
-        <div className="red" onClick={toggle}></div>
+        <div className="red" onClick={() => toggleTab(0)}></div>
         <div className="orange"></div>
         <div className="green"></div>
       </div>

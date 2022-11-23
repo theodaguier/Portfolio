@@ -1,12 +1,7 @@
 import React from 'react';
 import '../index.css';
 
-function CompetenceFolder({
-  CompetencesIsActive,
-  CompetencesSetActive,
-  toggleTabs,
-  setToggleTabs,
-}) {
+function CompetenceFolder({ setToggleTabs }) {
   const toggleTab = (index) => {
     setToggleTabs(index);
   };
@@ -17,10 +12,10 @@ function CompetenceFolder({
 
   return (
     <div className="folder">
-      {competences.map((folder) => (
+      {competences.map((folder, index) => (
         <div
           className="folder-content"
-          key={folder.id}
+          key={index}
           onClick={() => toggleTab(1)}
         >
           <div className="folder-icon">

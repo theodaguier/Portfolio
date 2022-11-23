@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './index.css';
+import Draggable from 'react-draggable';
 import SideBar from './SideBar';
-import CompetencesWindow from './Compétences';
 import Window from './Window';
 
-function AppleWindow() {
-  const [toggleTabs, setToggleTabs] = useState(1);
-
+function AppleWindow({ toggleTabs, setToggleTabs }) {
   return (
-    <div className="apple-window-container">
-      <SideBar toggleTabs={toggleTabs} setToggleTabs={setToggleTabs} />
-      <Window toggleTabs={toggleTabs} setToggleTabs={setToggleTabs} />
-    </div>
+    <Draggable>
+      <div className="apple-window-container">
+        <SideBar toggleTabs={toggleTabs} setToggleTabs={setToggleTabs} />
+        <Window toggleTabs={toggleTabs} setToggleTabs={setToggleTabs} />
+      </div>
+    </Draggable>
   );
 }
 

@@ -1,13 +1,11 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Statusbar from './Components/Status-bar';
 import Background from './assets/img/mac-os-background.jpg';
 import Dock from './Components/Dock';
 import Folders from './Components/Folders';
-import CompetencesWindow from './Components/AppleWindow/Compétences';
-import FormationWindow from './Components/AppleWindow/Formations';
-import AboutWindow from './Components/AppleWindow/A_propos';
 import AppleWindow from './Components/AppleWindow';
+import AboutWindow from './Components/AppleWindow/A_propos';
 
 var backgroundImage = {
   width: '100%',
@@ -20,44 +18,55 @@ var backgroundImage = {
 };
 
 function App() {
-  const [CompetencesIsActive, CompetencesSetActive] = useState(true);
-  const [FormationsIsActive, FormationsSetActive] = useState(true);
-  const [NoteIsActive, NoteSetActive] = useState(true);
+  // States
 
+  const [NoteIsActive, NoteSetActive] = useState(true);
+  const [toggleTabs, setToggleTabs] = useState(0);
+  const [noteWindows, setNoteWindows] = useState(false);
+
+  // Responsive
+
+  const [matches, setMatches] = useState(
+    window.matchMedia('(min-width: 768px)').matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia('(min-width: 768px)')
+      .addEventListener('change', (e) => setMatches(e.matches));
+  }, []);
 
   return (
     <div className="App">
-      <Statusbar />
-      <div className="container" style={backgroundImage}>
-        <Folders
-          CompetencesIsActive={CompetencesIsActive}
-          CompetencesSetActive={CompetencesSetActive}
-          FormationsIsActive={FormationsIsActive}
-          FormationsSetActive={FormationsSetActive}
-          NoteIsActive={NoteIsActive}
-          NoteSetActive={NoteSetActive}
-        />
-        <AppleWindow />
-        {!CompetencesIsActive && (
-          <CompetencesWindow
-            CompetencesIsActive={CompetencesIsActive}
-            CompetencesSetActive={CompetencesSetActive}
-          />
-        )}
-        {!FormationsIsActive && (
-          <FormationWindow
-            FormationsIsActive={FormationsIsActive}
-            FormationsSetActive={FormationsSetActive}
-          />
-        )}
-        {!NoteIsActive && (
-          <AboutWindow
+      {matches ? (
+        <div className="container" style={backgroundImage}>
+          <Statusbar />
+          <Folders
             NoteIsActive={NoteIsActive}
             NoteSetActive={NoteSetActive}
+            toggleTabs={toggleTabs}
+            setToggleTabs={setToggleTabs}
+            noteWindows={noteWindows}
+            setNoteWindows={setNoteWindows}
           />
-        )}
-      </div>
-      <Dock />
+
+          {toggleTabs === 0 ? null : (
+            <AppleWindow
+              toggleTabs={toggleTabs}
+              setToggleTabs={setToggleTabs}
+            />
+          )}
+
+          {noteWindows === false ? null : (
+            <AboutWindow
+              noteWindows={noteWindows}
+              setNoteWindows={setNoteWindows}
+            />
+          )}
+
+          <Dock />
+        </div>
+      ) : null}
     </div>
   );
 }
