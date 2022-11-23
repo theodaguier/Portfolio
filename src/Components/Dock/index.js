@@ -6,7 +6,7 @@ const dockIcon = [
   { id: 2, name: 'messages', img: './icons/message.png' },
   { id: 3, name: 'linkedin', img: './icons/linkedin.png' },
   { id: 4, name: 'github', img: './icons/github.png' },
-  { id: 5, name: 'github', img: './icons/twitter.png' },
+  { id: 5, name: 'twitter', img: './icons/twitter.png' },
 ];
 
 function Dock() {

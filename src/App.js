@@ -6,6 +6,7 @@ import Dock from './Components/Dock';
 import Folders from './Components/Folders';
 import AppleWindow from './Components/AppleWindow';
 import AboutWindow from './Components/AppleWindow/A_propos';
+import ContactPage from './Components/AppleWindow/Contact';
 
 var backgroundImage = {
   width: '100%',
@@ -23,6 +24,7 @@ function App() {
   const [NoteIsActive, NoteSetActive] = useState(true);
   const [toggleTabs, setToggleTabs] = useState(0);
   const [noteWindows, setNoteWindows] = useState(false);
+  const [contactWindow, setContactWindow] = useState(false);
 
   // Responsive
 
@@ -48,7 +50,15 @@ function App() {
             setToggleTabs={setToggleTabs}
             noteWindows={noteWindows}
             setNoteWindows={setNoteWindows}
+            contactWindow={contactWindow}
+            setContactWindow={setContactWindow}
           />
+          {contactWindow === true && (
+            <ContactPage
+              contactWindow={contactWindow}
+              setContactWindow={setContactWindow}
+            />
+          )}
 
           {toggleTabs === 0 ? null : (
             <AppleWindow

@@ -1,7 +1,10 @@
 import React from 'react';
-import Hammer from './Icon/hammer.png';
 
-export default function SideBar({ setToggleTabs }) {
+import Hammer from './Icon/hammer.png';
+import Star from './Icon/star.png';
+import Book from './Icon/book.png';
+
+export default function SideBar({ toggleTabs, setToggleTabs }) {
   const toggleTab = (index) => {
     setToggleTabs(index);
   };
@@ -16,13 +19,26 @@ export default function SideBar({ setToggleTabs }) {
       <div className="sidebar-menu">
         <div className="sidebar-title">
           <div className="sidebar-project">
-            <div className="project-name" onClick={() => toggleTab(1)}>
-              <img className="menubar" src={Hammer} alt="menubar-icon" />
+            <div
+              className={`project-name ${toggleTabs === 1 && 'active'}`}
+              onClick={() => toggleTab(1)}
+            >
+              <img className="menubar" src={Star} alt="menubar-icon" />
               <p className="project-title">Compétences</p>
             </div>
-            <div className="project-name" onClick={() => toggleTab(2)}>
+            <div
+              className={`project-name ${toggleTabs === 2 && 'active'}`}
+              onClick={() => toggleTab(2)}
+            >
+              <img className="menubar" src={Book} alt="menubar-icon" />
+              <p className="project-title">Formations</p>
+            </div>
+            <div
+              className={`project-name ${toggleTabs === 4 && 'active'}`}
+              onClick={() => toggleTab(4)}
+            >
               <img className="menubar" src={Hammer} alt="menubar-icon" />
-              <p className="project-title">Caca</p>
+              <p className="project-title">Projets</p>
             </div>
           </div>
         </div>

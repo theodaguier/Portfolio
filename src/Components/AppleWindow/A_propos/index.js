@@ -21,7 +21,7 @@ const icons = [
   { id: 10, icon: './icons/search.png' },
 ];
 
-function AboutWindow({ noteWindows, setNoteWindows }) {
+function AboutWindow({ setNoteWindows }) {
   const [text, setText] = useState(false);
 
   return (
