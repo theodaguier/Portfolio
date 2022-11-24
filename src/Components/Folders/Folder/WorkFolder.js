@@ -1,7 +1,7 @@
 import React from 'react';
 import '../index.css';
 
-function WorkFolder({ setToggleTabs }) {
+function WorkFolder({ setToggleTabs, dockActive, setDockActive }) {
   const toggleTab = (index) => {
     setToggleTabs(index);
   };
@@ -9,7 +9,7 @@ function WorkFolder({ setToggleTabs }) {
   const works = [{ id: 1, name: 'Mon travail', img: './Icons/appstore.png' }];
 
   return (
-    <div className="folder">
+    <div className="folder" onClick={() => setDockActive(dockActive === false)}>
       {works.map((work, index) => (
         <div
           className="folder-content"

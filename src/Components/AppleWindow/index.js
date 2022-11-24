@@ -3,15 +3,51 @@ import './index.css';
 import Draggable from 'react-draggable';
 import SideBar from './SideBar';
 import Window from './Window';
+import BackButton from './BackButton';
 
-function AppleWindow({ toggleTabs, setToggleTabs }) {
+function AppleWindow({
+  toggleTabs,
+  setToggleTabs,
+  matches,
+  setMatches,
+  dockActive,
+  setDockActive,
+}) {
   return (
-    <Draggable>
-      <div className="apple-window-container">
-        <SideBar toggleTabs={toggleTabs} setToggleTabs={setToggleTabs} />
-        <Window toggleTabs={toggleTabs} setToggleTabs={setToggleTabs} />
-      </div>
-    </Draggable>
+    <>
+      {matches ? (
+        <Draggable>
+          <div className="apple-window-container">
+            <SideBar toggleTabs={toggleTabs} setToggleTabs={setToggleTabs} />
+            <Window
+              matches={matches}
+              setMatches={setMatches}
+              toggleTabs={toggleTabs}
+              setToggleTabs={setToggleTabs}
+              dockActive={dockActive}
+              setDockActive={setDockActive}
+            />
+          </div>
+        </Draggable>
+      ) : (
+        <>
+          <BackButton
+            toggleTabs={toggleTabs}
+            setToggleTabs={setToggleTabs}
+            dockActive={dockActive}
+            setDockActive={setDockActive}
+          />
+          <Window
+            matches={matches}
+            setMatches={setMatches}
+            toggleTabs={toggleTabs}
+            setToggleTabs={setToggleTabs}
+            dockActive={dockActive}
+            setDockActive={setDockActive}
+          />
+        </>
+      )}
+    </>
   );
 }
 

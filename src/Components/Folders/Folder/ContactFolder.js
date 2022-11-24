@@ -1,7 +1,12 @@
 import React from 'react';
 import '../index.css';
 
-function ContactFolder({ contactWindow, setContactWindow }) {
+function ContactFolder({
+  contactWindow,
+  setContactWindow,
+  dockActive,
+  setDockActive,
+}) {
   const toggle = () => {
     setContactWindow(contactWindow);
   };
@@ -9,7 +14,7 @@ function ContactFolder({ contactWindow, setContactWindow }) {
   const contacts = [{ id: 5, name: 'Contact', img: './Icons/contact.png' }];
 
   return (
-    <div className="folder">
+    <div className="folder" onClick={() => setDockActive(dockActive === false)}>
       {contacts.map((contact, index) => (
         <div
           className="folder-content"
