@@ -1,4 +1,4 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .folder-container {
     display: flex;
     align-items: flex-end;
@@ -22,14 +22,14 @@
     height: 48px;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .folder-container {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 6px;
+    width: 100%;
+    padding-top: 66px;
     padding-left: 12px;
     padding-right: 12px;
-    margin-top: 76px;
   }
   .folder-container .folder {
     width: 25%;

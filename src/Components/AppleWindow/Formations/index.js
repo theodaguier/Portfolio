@@ -12,14 +12,21 @@ const formations = [
   },
 ];
 
-function FormationWindow({ setToggleTabs, dockActive, setDockActive }) {
+function FormationWindow({
+  setToggleTabs,
+  dockActive,
+  setDockActive,
+  matches,
+}) {
   return (
     <>
-      <BackButton
-        dockActive={dockActive}
-        setDockActive={setDockActive}
-        setToggleTabs={setToggleTabs}
-      />
+      {!matches ? (
+        <BackButton
+          dockActive={dockActive}
+          setDockActive={setDockActive}
+          setToggleTabs={setToggleTabs}
+        />
+      ) : null}
       <div>
         <p className="cat-title ios">Formations</p>
         <div className="skill-cat">

@@ -2,11 +2,36 @@ import React, { useEffect } from 'react';
 import './index.css';
 
 const dockIcon = [
-  { id: 1, name: 'mail', img: './icons/mail.png' },
-  { id: 2, name: 'messages', img: './icons/message.png' },
-  { id: 3, name: 'linkedin', img: './icons/linkedin.png' },
-  { id: 4, name: 'github', img: './icons/github.png' },
-  { id: 5, name: 'twitter', img: './icons/twitter.png' },
+  {
+    id: 1,
+    name: 'mail',
+    img: './icons/mail.png',
+    url: 'mailto:theo.daguier@icloud.com"',
+  },
+  {
+    id: 2,
+    name: 'messages',
+    img: './icons/message.png',
+    url: 'sms://+330656678583',
+  },
+  {
+    id: 3,
+    name: 'linkedin',
+    img: './icons/linkedin.png',
+    url: 'https://www.linkedin.com/in/theo-daguier/',
+  },
+  {
+    id: 4,
+    name: 'github',
+    img: './icons/github.png',
+    url: 'https://github.com/theodaguier',
+  },
+  {
+    id: 5,
+    name: 'twitter',
+    img: './icons/twitter.png',
+    url: 'https://twitter.com/theodaguier',
+  },
 ];
 
 function Dock() {
@@ -50,9 +75,11 @@ function Dock() {
         <div className="dock-c">
           {dockIcon.map((icon, index) => (
             <div className="icon-container" key={index}>
-              <div className="icon-image">
-                <img className="icon" src={icon.img} alt="icon" />
-              </div>
+              <a href={icon.url} target="_blank">
+                <div className="icon-image">
+                  <img className="icon" src={icon.img} alt="icon" />
+                </div>
+              </a>
             </div>
           ))}
         </div>

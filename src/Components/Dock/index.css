@@ -1,4 +1,4 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .dock {
     width: 100%;
     position: absolute;
@@ -22,22 +22,24 @@
             backdrop-filter: blur(48px);
     border-radius: 16px;
     padding: 8px 8px 8px 8px;
+    width: 30px;
+    height: 30px;
   }
-  .dock .icon-container {
+  .dock .dock-container .dock-c .icon-container {
     width: 48px;
     height: 48px;
   }
-  .dock .icon-container .icon {
+  .dock .dock-container .dock-c .icon-container .icon {
     width: 48px;
     height: 48px;
     border-radius: 7px;
     transition: all 0.2s;
   }
-  .dock .icon-container .icon:hover {
+  .dock .dock-container .dock-c .icon-container .icon:hover {
     transform: scale(1.25);
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .dock {
     display: flex;
     flex-direction: row;
@@ -45,11 +47,9 @@
     align-items: flex-start;
     padding: 17px;
     gap: 15px;
-    position: absolute;
     left: 2.5vw;
     width: 95%;
     height: 94px;
-    bottom: 12px;
     background: rgba(245, 245, 245, 0.6);
     -webkit-backdrop-filter: blur(67.957px);
             backdrop-filter: blur(67.957px);
@@ -62,20 +62,20 @@
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
   }
-  .icon-container {
+  .dock .dock-c .icon-container {
     width: 60px;
     height: 60px;
   }
-  .icon-container .icon {
+  .dock .dock-c .icon-container .icon {
     width: 60px;
     height: 60px;
     border-radius: 7px;
     transition: all 0.2s;
   }
-  .icon-container .icon:hover {
+  .dock .dock-c .icon-container .icon:hover {
     transform: scale(1.25);
   }
-  .icon-container:last-child {
+  .dock .dock-c .icon-container:last-child {
     display: none;
   }
 }/*# sourceMappingURL=index.css.map */

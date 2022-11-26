@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Draggable from 'react-draggable';
-import BackButton from '../BackButton';
+import BackButtonContact from '../BackButton';
 
 import Portrait from './img/portrait.png';
 
@@ -72,7 +72,8 @@ function ContactPage({
       ) : (
         <>
           <div className="window-frame contact-container">
-            <BackButton
+            <BackButtonContact
+              setContactWindow={setContactWindow}
               setToggleTabs={setToggleTabs}
               dockActive={dockActive}
               setDockActive={setDockActive}

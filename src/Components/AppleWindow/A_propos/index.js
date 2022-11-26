@@ -8,6 +8,7 @@ import Square from './Icon/square.png';
 import Trash from './Icon/trash.png';
 import FolderIcon from './Icon/folder-icon.png';
 import BackButton from '../BackButton';
+import BackButtonNotes from '../BackButtonNotes';
 
 const icons = [
   { id: 1, icon: './icons/edit.png' },
@@ -152,7 +153,8 @@ function AboutWindow({ setNoteWindows, dockActive, setDockActive, matches }) {
         <>
           <div className="apple-window-container">
             <div className="window-frame notes">
-              <BackButton
+              <BackButtonNotes
+                setNoteWindows={setNoteWindows}
                 dockActive={dockActive}
                 setDockActive={setDockActive}
               />

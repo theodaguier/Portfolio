@@ -1,5 +1,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
+
+import './safariFix';
+import './safariFix.css';
+
 import Statusbar from './Components/Status-bar';
 import Background from './assets/img/mac-os-background.jpg';
 import BackgroundMobile from './assets/img/ios-bg.webp';
@@ -41,12 +45,12 @@ function App() {
   // Responsive
 
   const [matches, setMatches] = useState(
-    window.matchMedia('(min-width: 600px)').matches
+    window.matchMedia('(min-width: 800px)').matches
   );
 
   useEffect(() => {
     window
-      .matchMedia('(min-width: 600px)')
+      .matchMedia('(min-width: 800px)')
       .addEventListener('change', (e) => setMatches(e.matches));
   }, []);
 
