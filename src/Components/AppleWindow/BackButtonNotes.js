@@ -2,12 +2,7 @@ import React from 'react';
 
 import Chevron from './Icon/chevron-left.png';
 
-function BackButtonNotes({
-  setNoteWindows,
-  setToggleTabs,
-  dockActive,
-  setDockActive,
-}) {
+function BackButtonNotes({ setNoteWindows, dockActive, setDockActive }) {
   const toggleTab = () => {
     setNoteWindows(false);
   };

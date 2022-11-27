@@ -16,7 +16,7 @@
   src: url('../../assets/font/SF-Pro-Display-Medium.otf');
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
   .active {
     display: block;
   }
@@ -503,7 +503,7 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .apple-window-container {
     position: absolute;
     top: 0;
@@ -965,8 +965,15 @@
       height: 36px;
       border-bottom: solid 1px rgba(255, 255, 255, 0.1);
       .type {
-        width: 25%;
+        width: 50%;
       }
+    }
+  }
+
+  a {
+    .type {
+      width: 100%;
+      text-decoration: underline;
     }
   }
 
@@ -994,6 +1001,8 @@
     height: 45px;
     display: flex;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     .back {
       width: 17px;

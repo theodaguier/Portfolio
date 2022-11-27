@@ -1,7 +1,7 @@
 import React from 'react';
 import '../index.css';
 
-function AboutNote({ noteWindows, setNoteWindows }) {
+function AboutNote({ setDockActive, dockActive, noteWindows, setNoteWindows }) {
   const toggle = () => {
     setNoteWindows(noteWindows);
   };
@@ -9,7 +9,7 @@ function AboutNote({ noteWindows, setNoteWindows }) {
   const abouts = [{ id: 3, name: 'À propos', img: './Icons/notes.png' }];
 
   return (
-    <div className="folder">
+    <div className="folder" onClick={() => setDockActive(dockActive === false)}>
       {abouts.map((about, index) => (
         <div
           className="folder-content"

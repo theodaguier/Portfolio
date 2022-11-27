@@ -1,4 +1,4 @@
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
   .dock {
     width: 100%;
     position: absolute;
@@ -22,8 +22,6 @@
             backdrop-filter: blur(48px);
     border-radius: 16px;
     padding: 8px 8px 8px 8px;
-    width: 30px;
-    height: 30px;
   }
   .dock .dock-container .dock-c .icon-container {
     width: 48px;
@@ -39,7 +37,7 @@
     transform: scale(1.25);
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .dock {
     display: flex;
     flex-direction: row;

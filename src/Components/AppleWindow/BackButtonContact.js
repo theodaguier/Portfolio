@@ -2,14 +2,9 @@ import React from 'react';
 
 import Chevron from './Icon/chevron-left.png';
 
-function BackButtonContact({
-  setNoteWindows,
-  setToggleTabs,
-  dockActive,
-  setDockActive,
-}) {
+function BackButtonContact({ setContactWindow, dockActive, setDockActive }) {
   const toggleTab = () => {
-    setNoteWindows(false);
+    setContactWindow(false);
   };
   return (
     <div

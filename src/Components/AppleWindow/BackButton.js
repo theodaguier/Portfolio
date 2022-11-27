@@ -2,21 +2,16 @@ import React from 'react';
 
 import Chevron from './Icon/chevron-left.png';
 
-function BackButton({
-  setContactWindow,
-  setToggleTabs,
-  dockActive,
-  setDockActive,
-}) {
-  const toggleTab = () => {
-    setContactWindow(false);
+function BackButton({ setToggleTabs, dockActive, setDockActive }) {
+  const toggleTab = (index) => {
+    setToggleTabs(index);
   };
   return (
     <div
       className="nav-bar-container"
       onClick={() => setDockActive(dockActive === false)}
     >
-      <div className="back" onClick={toggleTab}>
+      <div className="back" onClick={() => toggleTab(0)}>
         <img src={Chevron} alt="" />
         <p className="nav-bar-txt">Retour</p>
       </div>

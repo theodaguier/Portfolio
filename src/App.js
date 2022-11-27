@@ -45,12 +45,12 @@ function App() {
   // Responsive
 
   const [matches, setMatches] = useState(
-    window.matchMedia('(min-width: 800px)').matches
+    window.matchMedia('(min-width: 900px)').matches
   );
 
   useEffect(() => {
     window
-      .matchMedia('(min-width: 800px)')
+      .matchMedia('(min-width: 900px)')
       .addEventListener('change', (e) => setMatches(e.matches));
   }, []);
 
