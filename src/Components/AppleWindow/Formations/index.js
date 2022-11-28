@@ -9,6 +9,7 @@ const formations = [
     name: 'Apple Foundation Program',
     description: 'Concevoir',
     img: './icons/apple.png',
+    desc: 'Développer une application iOS, développer des compétences transversales qui renforcent l’employabilité',
   },
 ];
 
@@ -32,11 +33,14 @@ function FormationWindow({
         <div className="skill-cat">
           {formations.map((formation, index) => (
             <div className="skill" key={index}>
-              <div className="skill-content w">
+              <div className="skill-content w forma">
                 <div className="icon-content">
                   <img src={formation.img} alt="icon" />
                 </div>
-                <p className="skill-name">{formation.name}</p>
+                <p className="skill-name">
+                  {formation.name}
+                  <p className="skill-desc">{formation.desc}</p>
+                </p>
               </div>
             </div>
           ))}

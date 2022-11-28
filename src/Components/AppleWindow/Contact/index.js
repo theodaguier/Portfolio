@@ -63,8 +63,12 @@ function ContactPage({
                 </div>
               ))}
               <div className="contact-info">
-                <p className="type">Télécharger mon CV</p>
-                <p className="content"></p>
+                <a
+                  href="https://drive.google.com/file/d/1py-q9HyjHSD_OlQlO37ssw6kOeWlL4ra/view?usp=sharing"
+                  target="_blank"
+                >
+                  <p className="type">Télécharger mon CV</p>
+                </a>
               </div>
             </div>
           </div>

@@ -23,19 +23,32 @@ export default function Statusbar({ matches, setMatches }) {
             <div className={`apple-menu ${navbarOpen ? ' showMenu' : ''}`}>
               <ul>
                 <li className="apple-menu-link">
-                  <a href="">GitHub</a>
+                  <a href="https://github.com/theodaguier" target="_blank">
+                    GitHub
+                  </a>
                 </li>
                 <li className="apple-menu-link">
-                  <a href="">Linkedin</a>
+                  <a
+                    href="https://www.linkedin.com/in/theo-daguier/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
                 </li>
                 <li className="apple-menu-link">
-                  <a href="">Twitter</a>
+                  <a href="https://twitter.com/theodaguier" target="_blank">
+                    Twitter
+                  </a>
                 </li>
                 <li className="apple-menu-link">
-                  <a href="">Mail</a>
+                  <a href="sms://+330656678583" target="_blank">
+                    SMS
+                  </a>
                 </li>
                 <li className="apple-menu-link">
-                  <a href="">Phone</a>
+                  <a href="mailto:theo.daguier@icloud.com" target="_blank">
+                    Mail
+                  </a>
                 </li>
               </ul>
             </div>
@@ -43,16 +56,22 @@ export default function Statusbar({ matches, setMatches }) {
           <div className="nav-page">
             <ul className="page-link-container">
               <li className="page-link">
-                <a href="">Home</a>
+                <p>Fichier</p>
               </li>
               <li className="page-link">
-                <a href="">Work</a>
+                <p>Édition</p>
               </li>
               <li className="page-link">
-                <a href="">About</a>
+                <p>Présentation</p>
               </li>
               <li className="page-link">
-                <a href="">Contact</a>
+                <p>Aller</p>
+              </li>
+              <li className="page-link">
+                <p>Fenêtre</p>
+              </li>
+              <li className="page-link">
+                <p>Aide</p>
               </li>
             </ul>
           </div>
