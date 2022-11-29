@@ -1,15 +1,15 @@
-import React from 'react';
-import '../index.css';
+import React from "react";
+import "../index.css";
 
-import BackButton from '../BackButton';
+import BackButton from "../BackButton";
 
 const formations = [
   {
     id: 1,
-    name: 'Apple Foundation Program',
-    description: 'Concevoir',
-    img: './icons/apple.png',
-    desc: 'Développer une application iOS, développer des compétences transversales qui renforcent l’employabilité',
+    name: "Apple Foundation Program",
+    description: "Concevoir",
+    img: "./icons/apple.png",
+    desc: "Développer une application iOS, développer des compétences transversales qui renforcent l’employabilité",
   },
 ];
 

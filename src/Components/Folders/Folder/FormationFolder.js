@@ -1,12 +1,12 @@
-import React from 'react';
-import '../index.css';
+import React from "react";
+import "../index.css";
 
 function FormationFolder({ setToggleTabs, dockActive, setDockActive }) {
   const toggleTab = (index) => {
     setToggleTabs(index);
   };
 
-  const formations = [{ id: 1, name: 'Formations', img: './Icons/folder.png' }];
+  const formations = [{ id: 1, name: "Formations", img: "./Icons/folder.png" }];
 
   return (
     <div className="folder" onClick={() => setDockActive(dockActive === false)}>

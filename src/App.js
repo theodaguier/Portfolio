@@ -1,36 +1,36 @@
-import './App.css';
-import React, { useState, useEffect } from 'react';
+import "./App.css";
+import React, { useState, useEffect } from "react";
 
-import './safariFix';
-import './safariFix.css';
+import "./safariFix";
+import "./safariFix.css";
 
-import Statusbar from './Components/Status-bar';
-import Background from './assets/img/mac-os-background.jpg';
-import BackgroundMobile from './assets/img/ios-bg.webp';
-import Dock from './Components/Dock';
-import Folders from './Components/Folders';
-import AppleWindow from './Components/AppleWindow';
-import AboutWindow from './Components/AppleWindow/A_propos';
-import ContactPage from './Components/AppleWindow/Contact';
+import Statusbar from "./Components/Status-bar";
+import Background from "./assets/img/mac-os-background.jpg";
+import BackgroundMobile from "./assets/img/ios-bg.webp";
+import Dock from "./Components/Dock";
+import Folders from "./Components/Folders";
+import AppleWindow from "./Components/AppleWindow";
+import AboutWindow from "./Components/AppleWindow/A_propos";
+import ContactPage from "./Components/AppleWindow/Contact";
 
 var backgroundImage = {
-  width: '100%',
-  height: '100vh',
+  width: "100%",
+  height: "100vh",
   backgroundImage: `url(${Background})`,
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  position: 'absolute',
-  top: '0',
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  position: "absolute",
+  top: "0",
 };
 
 var backgroundMobile = {
-  width: '100%',
-  height: '100vh',
+  width: "100%",
+  height: "100vh",
   backgroundImage: `url(${BackgroundMobile})`,
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  position: 'absolute',
-  top: '0',
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  position: "absolute",
+  top: "0",
 };
 
 function App() {
@@ -45,13 +45,13 @@ function App() {
   // Responsive
 
   const [matches, setMatches] = useState(
-    window.matchMedia('(min-width: 900px)').matches
+    window.matchMedia("(min-width: 900px)").matches
   );
 
   useEffect(() => {
     window
-      .matchMedia('(min-width: 900px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
+      .matchMedia("(min-width: 900px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
   }, []);
 
   return (

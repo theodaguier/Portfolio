@@ -1,13 +1,13 @@
-import React from 'react';
-import './index.css';
+import React from "react";
+import "./index.css";
 
-import FormationFolder from './Folder/FormationFolder';
-import CompetenceFolder from './Folder/CompetenceFolder';
-import AboutNote from './Folder/AboutNote';
-import WorkFolder from './Folder/WorkFolder';
-import ContactFolder from './Folder/ContactFolder';
-import WidgetProject from '../Mobile/Widget/WidgetProject';
-import TwitterIcon from './Folder/TwitterIcon';
+import FormationFolder from "./Folder/FormationFolder";
+import CompetenceFolder from "./Folder/CompetenceFolder";
+import AboutNote from "./Folder/AboutNote";
+import WorkFolder from "./Folder/WorkFolder";
+import ContactFolder from "./Folder/ContactFolder";
+import WidgetProject from "../Mobile/Widget/WidgetProject";
+import TwitterIcon from "./Folder/TwitterIcon";
 
 function Folders({
   matches,

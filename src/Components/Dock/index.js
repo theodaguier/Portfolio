@@ -1,50 +1,50 @@
-import React, { useEffect } from 'react';
-import './index.css';
+import React, { useEffect } from "react";
+import "./index.css";
 
 const dockIcon = [
   {
     id: 1,
-    name: 'mail',
-    img: './icons/mail.png',
+    name: "mail",
+    img: "./icons/mail.png",
     url: 'mailto:theo.daguier@icloud.com"',
   },
   {
     id: 2,
-    name: 'messages',
-    img: './icons/message.png',
-    url: 'sms://+330656678583',
+    name: "messages",
+    img: "./icons/message.png",
+    url: "sms://+330656678583",
   },
   {
     id: 3,
-    name: 'linkedin',
-    img: './icons/linkedin.png',
-    url: 'https://www.linkedin.com/in/theo-daguier/',
+    name: "linkedin",
+    img: "./icons/linkedin.png",
+    url: "https://www.linkedin.com/in/theo-daguier/",
   },
   {
     id: 4,
-    name: 'github',
-    img: './icons/github.png',
-    url: 'https://github.com/theodaguier',
+    name: "github",
+    img: "./icons/github.png",
+    url: "https://github.com/theodaguier",
   },
   {
     id: 5,
-    name: 'twitter',
-    img: './icons/twitter.png',
-    url: 'https://twitter.com/theodaguier',
+    name: "twitter",
+    img: "./icons/twitter.png",
+    url: "https://twitter.com/theodaguier",
   },
 ];
 
 function Dock() {
-  let icons = document.querySelectorAll('.icon');
+  let icons = document.querySelectorAll(".icon");
 
   useEffect(() => {
     icons.forEach((item, index) => {
-      item.addEventListener('mouseover', (e) => {
+      item.addEventListener("mouseover", (e) => {
         focus(e.target, index);
       });
-      item.addEventListener('mouseleave', (e) => {
+      item.addEventListener("mouseleave", (e) => {
         icons.forEach((item) => {
-          item.style.transform = 'scale(1)  translateY(0px)';
+          item.style.transform = "scale(1)  translateY(0px)";
         });
       });
     });
@@ -55,17 +55,17 @@ function Dock() {
       let next2 = index + 2;
 
       if (previous == -1) {
-        console.log('first element');
-        elem.style.transform = 'scale(1.5)  translateY(-10px)';
+        console.log("first element");
+        elem.style.transform = "scale(1.5)  translateY(-10px)";
       } else if (next == icons.length) {
-        elem.style.transform = 'scale(1.5)  translateY(-10px)';
-        console.log('last element');
+        elem.style.transform = "scale(1.5)  translateY(-10px)";
+        console.log("last element");
       } else {
-        elem.style.transform = 'scale(1.5)  translateY(-10px)';
-        icons[previous].style.transform = 'scale(1.2) translateY(-6px)';
-        icons[previous1].style.transform = 'scale(1.1)';
-        icons[next].style.transform = 'scale(1.2) translateY(-6px)';
-        icons[next2].style.transform = 'scale(1.1)';
+        elem.style.transform = "scale(1.5)  translateY(-10px)";
+        icons[previous].style.transform = "scale(1.2) translateY(-6px)";
+        icons[previous1].style.transform = "scale(1.1)";
+        icons[next].style.transform = "scale(1.2) translateY(-6px)";
+        icons[next2].style.transform = "scale(1.1)";
       }
     };
   }, []);
