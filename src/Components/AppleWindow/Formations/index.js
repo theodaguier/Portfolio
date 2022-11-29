@@ -7,7 +7,6 @@ const formations = [
   {
     id: 1,
     name: "Apple Foundation Program",
-    description: "Concevoir",
     img: "./icons/apple.png",
     desc: "Développer une application iOS, développer des compétences transversales qui renforcent l’employabilité",
   },

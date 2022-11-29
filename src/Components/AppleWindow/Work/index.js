@@ -1,45 +1,45 @@
-import React from 'react';
-import '../index.css';
+import React from "react";
+import "../index.css";
 
-import Banner from './img/banner.png';
-import BackButton from '../BackButton';
+import Banner from "./img/banner.png";
+import BackButton from "../BackButton";
 
 const works = [
   {
     id: 1,
-    name: 'Crypto Tracker',
-    description: 'Suivi de la progression des cryptomonnaies.',
-    img: './icons/crypto.png',
-    color: '#5856d6;',
-    tag: '#Web #React JS #API',
-    url: 'https://theodaguier.github.io/crypto-tracker/',
+    name: "Crypto Tracker",
+    description: "Suivi de la progression des cryptomonnaies.",
+    img: "./icons/crypto.png",
+    color: "#5856d6;",
+    tag: "#Web #React JS #API",
+    url: "https://theodaguier.github.io/crypto-tracker/",
   },
   {
     id: 2,
-    name: 'Notes.',
-    description: 'Prise de note rapide.',
-    img: './icons/notes.png',
-    color: '#b3d7ff',
-    tag: '#Web #React JS',
-    url: 'https://notes-application-dt.netlify.app',
+    name: "Notes.",
+    description: "Prise de note rapide.",
+    img: "./icons/notes.png",
+    color: "#b3d7ff",
+    tag: "#Web #React JS",
+    url: "https://notes-application-dt.netlify.app",
   },
   {
     id: 3,
-    name: 'Drum Kit',
-    description: 'Simple drum kit.',
-    img: './icons/garageband.png',
-    color: '#ff9f0a',
-    tag: '#Web #Javascript',
-    url: 'https://joyful-halva-2c6ff3.netlify.app',
+    name: "Drum Kit",
+    description: "Simple drum kit.",
+    img: "./icons/garageband.png",
+    color: "#ff9f0a",
+    tag: "#Web #Javascript",
+    url: "https://joyful-halva-2c6ff3.netlify.app",
   },
   {
     id: 4,
-    name: 'Slide App',
-    description: 'Application découverte de musique basé sur le swipe.',
-    img: './icons/music.svg',
-    color: ' #98989d',
-    tag: '#Swift #SwiftUI',
-    url: 'https://joyful-halva-2c6ff3.netlify.app',
+    name: "Slide App",
+    description: "Application découverte de musique basé sur le swipe.",
+    img: "./icons/music.svg",
+    color: " #98989d",
+    tag: "#Swift #SwiftUI",
+    url: "https://joyful-halva-2c6ff3.netlify.app",
   },
 ];
 
