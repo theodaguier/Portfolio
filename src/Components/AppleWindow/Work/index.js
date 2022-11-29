@@ -12,7 +12,7 @@ const works = [
     img: "./icons/crypto.png",
     color: "#5856d6;",
     tag: "#Web #React JS #API",
-    url: "https://github.com/theodaguier/crypto-tracker",
+    url: "https://crypto-tracker-app-td.netlify.app",
   },
   {
     id: 2,
