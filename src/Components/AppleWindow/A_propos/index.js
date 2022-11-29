@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import '../index.css';
+import React, { useState } from "react";
+import "../index.css";
 
-import Draggable from 'react-draggable';
+import Draggable from "react-draggable";
 
-import List from './Icon/list.png';
-import Square from './Icon/square.png';
-import Trash from './Icon/trash.png';
-import FolderIcon from './Icon/folder-icon.png';
-import BackButton from '../BackButton';
-import BackButtonNotes from '../BackButtonNotes';
+import List from "./Icon/list.png";
+import Square from "./Icon/square.png";
+import Trash from "./Icon/trash.png";
+import FolderIcon from "./Icon/folder-icon.png";
+import BackButton from "../BackButton";
+import BackButtonNotes from "../BackButtonNotes";
 
 const icons = [
-  { id: 1, icon: './icons/edit.png' },
-  { id: 2, icon: './icons/textformat.png' },
-  { id: 3, icon: './icons/checkmark.png' },
-  { id: 4, icon: './icons/tablecells.png' },
-  { id: 5, icon: './icons/lock.png' },
-  { id: 6, icon: './icons/photo.png' },
-  { id: 7, icon: './icons/person.png' },
-  { id: 8, icon: './icons/share.png' },
-  { id: 9, icon: './icons/chevrons.png' },
-  { id: 10, icon: './icons/search.png' },
+  { id: 1, icon: "./icons/edit.png" },
+  { id: 2, icon: "./icons/textformat.png" },
+  { id: 3, icon: "./icons/checkmark.png" },
+  { id: 4, icon: "./icons/tablecells.png" },
+  { id: 5, icon: "./icons/lock.png" },
+  { id: 6, icon: "./icons/photo.png" },
+  { id: 7, icon: "./icons/person.png" },
+  { id: 8, icon: "./icons/share.png" },
+  { id: 9, icon: "./icons/chevrons.png" },
+  { id: 10, icon: "./icons/search.png" },
 ];
 
 function AboutWindow({ setNoteWindows, dockActive, setDockActive, matches }) {
@@ -36,6 +36,7 @@ function AboutWindow({ setNoteWindows, dockActive, setDockActive, matches }) {
                 <div
                   className="red"
                   onClick={() => setNoteWindows(false)}
+                  onTouchEnd={() => setNoteWindows(false)}
                 ></div>
                 <div className="orange"></div>
                 <div className="green"></div>
@@ -78,7 +79,7 @@ function AboutWindow({ setNoteWindows, dockActive, setDockActive, matches }) {
                   <div className="notes-list">
                     <div
                       className={`notes ${
-                        text === false ? 'active' : 'noactive'
+                        text === false ? "active" : "noactive"
                       }`}
                       onClick={() => setText(!text)}
                     >
@@ -89,7 +90,7 @@ function AboutWindow({ setNoteWindows, dockActive, setDockActive, matches }) {
                     </div>
                     <div
                       className={`notes ${
-                        text === true ? 'active' : 'noactive'
+                        text === true ? "active" : "noactive"
                       }`}
                       onClick={() => setText(!text)}
                     >
@@ -132,7 +133,7 @@ function AboutWindow({ setNoteWindows, dockActive, setDockActive, matches }) {
                         <p className="text">
                           <span className="underline">
                             Apple Foundation Program  Octobre - Novembre 2022
-                          </span>{' '}
+                          </span>{" "}
                           <br />
                           - Concevoir une application mobile à partir d'une
                           problématique
@@ -180,7 +181,7 @@ function AboutWindow({ setNoteWindows, dockActive, setDockActive, matches }) {
                   <div className="notes-list">
                     <div
                       className={`notes ${
-                        text === false ? 'active' : 'noactive'
+                        text === false ? "active" : "noactive"
                       }`}
                       onClick={() => setText(!text)}
                     >
@@ -191,7 +192,7 @@ function AboutWindow({ setNoteWindows, dockActive, setDockActive, matches }) {
                     </div>
                     <div
                       className={`notes ${
-                        text === true ? 'active' : 'noactive'
+                        text === true ? "active" : "noactive"
                       }`}
                       onClick={() => setText(!text)}
                     >
@@ -234,7 +235,7 @@ function AboutWindow({ setNoteWindows, dockActive, setDockActive, matches }) {
                         <p className="text">
                           <span className="underline">
                             Apple Foundation Program  Octobre - Novembre 2022
-                          </span>{' '}
+                          </span>{" "}
                           <br />
                           - Concevoir une application mobile à partir d'une
                           problématique

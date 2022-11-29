@@ -1,5 +1,5 @@
-import React from 'react';
-import '../index.css';
+import React from "react";
+import "../index.css";
 
 function TwitterIcon({ setToggleTabs }) {
   const toggleTab = (index) => {
@@ -9,21 +9,17 @@ function TwitterIcon({ setToggleTabs }) {
   const twitter = [
     {
       id: 6,
-      name: 'Twitter',
-      img: './Icons/twitter.png',
-      url: 'https://twitter.com/theodaguier',
+      name: "Twitter",
+      img: "./Icons/twitter.png",
+      url: "https://twitter.com/theodaguier",
     },
   ];
 
   return (
     <div className="folder">
       {twitter.map((twi, index) => (
-        <a href={twi.url} target="_blank">
-          <div
-            className="folder-content"
-            key={index}
-            onClick={() => toggleTab(6)}
-          >
+        <a href={twi.url} target="_blank" rel="noreferrer" key={index}>
+          <div className="folder-content" onClick={() => toggleTab(6)}>
             <div className="folder-icon">
               <img className="i-folder" src={twi.img} alt="folder" />
             </div>

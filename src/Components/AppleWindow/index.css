@@ -78,7 +78,7 @@
     font-family: "SF Pro Text Bold";
     color: #ebebf5;
     font-size: 11px;
-    padding-left: 0.4vw;
+    padding-left: 1.4vw;
     padding-top: 20px;
   }
   .active {
@@ -89,7 +89,7 @@
     padding-top: 12px;
   }
   .sidebar-project .project-name {
-    width: 144px;
+    width: 90%;
     height: 28px;
     display: flex;
     flex-direction: row;
@@ -152,6 +152,7 @@
   }
   .skill-cat .skill-content {
     display: flex;
+    height: 100%;
   }
   .skill-cat .skill-content .icon-content {
     width: 42px;
@@ -167,18 +168,21 @@
   }
   .skill-cat .skill-content .skill-name {
     width: 246px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-left: 10px;
   }
   .skill-cat .skill-content .skill-name .skill-desc {
     font-size: 10px;
+    margin-bottom: 10px;
     color: rgba(255, 255, 255, 0.55);
   }
   .skill-cat .forma {
-    align-items: center;
+    height: 100%;
+    align-items: flex-start;
   }
   .skill-cat .w {
     margin-bottom: 9px;
@@ -457,6 +461,9 @@
   .contact-container .contact-info .type {
     width: 25%;
   }
+  .contact-container .contact-info a {
+    width: 100%;
+  }
   .contact-container .contact-info a .type {
     width: 100%;
     text-decoration: underline;
@@ -618,6 +625,7 @@
   }
   .skill-cat .skill-content {
     display: flex;
+    height: 100%;
   }
   .skill-cat .skill-content .icon-content {
     width: 42px;
@@ -633,6 +641,7 @@
   }
   .skill-cat .skill-content .skill-name {
     width: 246px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -917,7 +926,7 @@
     border-bottom: solid 1px rgba(255, 255, 255, 0.1);
   }
   .contact-container .contact-info .type {
-    width: 50%;
+    width: 100%;
   }
   a .type {
     width: 100%;
@@ -974,4 +983,35 @@
     display: flex;
     padding: 12px 12px 12px 12px;
   }
+}
+@media only screen and (max-width: 700px) {
+  .cat-ios {
+    flex-direction: column;
+  }
+  .cat-ios .skill-ios {
+    width: 100%;
+  }
+  .cat-ios .skill-ios:last-child {
+    margin-top: 8px;
+  }
+  .cat-ios .skill-ios {
+    width: 100%;
+  }
+  .cat-ios .forma {
+    width: 100%;
+    height: 65px;
+    align-items: flex-start;
+  }
+  .cat-ios .forma .name-ios {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .cat-ios .forma .desc-ios {
+    margin-bottom: 10px;
+  }
+}
+.certif {
+  margin-top: 16px;
 }/*# sourceMappingURL=index.css.map */

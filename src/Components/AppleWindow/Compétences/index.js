@@ -1,64 +1,64 @@
-import React from 'react';
-import BackButton from '../BackButton';
-import '../index.css';
+import React from "react";
+import BackButton from "../BackButton";
+import "../index.css";
 
 const devIos = [
   {
     id: 1,
-    name: 'Swift',
-    img: './icons/swift.png',
-    desc: 'Langage de programmation iOS.',
+    name: "Swift",
+    img: "./icons/swift.png",
+    desc: "Langage de programmation iOS.",
   },
   {
     id: 2,
-    name: 'Swift UI',
-    img: './icons/swiftUI.png',
-    category: 'Développement iOS',
-    desc: 'Framework Swift.',
+    name: "Swift UI",
+    img: "./icons/swiftUI.png",
+    category: "Développement iOS",
+    desc: "Framework Swift.",
   },
 ];
 
 const devWeb = [
   {
     id: 1,
-    name: 'React JS',
-    img: './icons/react.png',
-    category: 'Devéloppement Web',
-    desc: 'Librairie JavaScript.',
+    name: "React JS",
+    img: "./icons/react.png",
+    category: "Devéloppement Web",
+    desc: "Librairie JavaScript.",
   },
   {
     id: 2,
-    name: 'JavaScript',
-    img: './icons/js.png',
-    category: 'Devéloppement Web',
-    desc: 'Langage de programmation.',
+    name: "JavaScript",
+    img: "./icons/js.png",
+    category: "Devéloppement Web",
+    desc: "Langage de programmation.",
   },
   {
     id: 3,
-    name: 'CSS',
-    img: './icons/css.png',
-    category: 'Devéloppement Web',
-    desc: 'Langage informatique présentation HTML.',
+    name: "CSS",
+    img: "./icons/css.png",
+    category: "Devéloppement Web",
+    desc: "Langage informatique présentation HTML.",
   },
   {
     id: 4,
-    name: 'SASS',
-    img: './icons/sass.png',
-    category: 'Devéloppement Web',
-    desc: 'Surcouche CSS.',
+    name: "SASS",
+    img: "./icons/sass.png",
+    category: "Devéloppement Web",
+    desc: "Surcouche CSS.",
   },
   {
     id: 5,
-    name: 'Bootstrap',
-    img: './icons/bootstrap.png',
-    category: 'Devéloppement Web',
-    desc: 'Librairie HTML / CSS/ JS.',
+    name: "Bootstrap",
+    img: "./icons/bootstrap.png",
+    category: "Devéloppement Web",
+    desc: "Librairie HTML / CSS/ JS.",
   },
   {
     id: 6,
-    name: 'GSAP',
-    img: './icons/gsap.png',
-    category: 'Devéloppement Web',
+    name: "GSAP",
+    img: "./icons/gsap.png",
+    category: "Devéloppement Web",
     desc: "Librairie d'animation JS.",
   },
 ];
@@ -66,20 +66,20 @@ const devWeb = [
 const versioning = [
   {
     id: 1,
-    name: 'Git / Github',
-    img: './icons/github.png',
-    category: 'Versioning',
-    desc: 'Versioning.',
+    name: "Git / Github",
+    img: "./icons/github.png",
+    category: "Versioning",
+    desc: "Versioning.",
   },
 ];
 
 const software = [
   {
     id: 1,
-    name: 'Figma',
-    img: './icons/figma.png',
-    category: 'Software',
-    desc: 'Outil de prototypage & design collaboratif.',
+    name: "Figma",
+    img: "./icons/figma.png",
+    category: "Software",
+    desc: "Outil de prototypage & design collaboratif.",
   },
 ];
 
@@ -111,8 +111,8 @@ function CompetencesWindow({
           </div>
           <p className="cat-title web">Developpement Web</p>
           <div className="skill-cat">
-            {devWeb.map((web) => (
-              <div className="skill" id={web.id}>
+            {devWeb.map((web, index) => (
+              <div className="skill" id={index}>
                 <div className="skill-content w">
                   <div className="icon-content">
                     <img src={web.img} alt="icon" />
@@ -127,8 +127,8 @@ function CompetencesWindow({
           </div>
           <p className="cat-title vers">Versioning</p>
           <div className="skill-cat">
-            {versioning.map((vers) => (
-              <div className="skill" id={vers.id}>
+            {versioning.map((vers, index) => (
+              <div className="skill" id={index}>
                 <div className="skill-content">
                   <div className="icon-content">
                     <img src={vers.img} alt="icon" />
@@ -143,8 +143,8 @@ function CompetencesWindow({
           </div>
           <p className="cat-title soft">Software</p>
           <div className="skill-cat">
-            {software.map((soft) => (
-              <div className="skill" id={soft.id}>
+            {software.map((soft, index) => (
+              <div className="skill" id={index}>
                 <div className="skill-content">
                   <div className="icon-content">
                     <img src={soft.img} alt="icon" />
@@ -185,8 +185,8 @@ function CompetencesWindow({
             </div>
             <p className="cat-title web">Developpement Web</p>
             <div className="skill-cat">
-              {devWeb.map((web) => (
-                <div className="skill" id={web.id}>
+              {devWeb.map((web, index) => (
+                <div className="skill" id={index}>
                   <div className="skill-content w">
                     <div className="icon-content">
                       <img src={web.img} alt="icon" />
@@ -201,8 +201,8 @@ function CompetencesWindow({
             </div>
             <p className="cat-title vers">Versioning</p>
             <div className="skill-cat">
-              {versioning.map((vers) => (
-                <div className="skill" id={vers.id}>
+              {versioning.map((vers, index) => (
+                <div className="skill" id={index}>
                   <div className="skill-content">
                     <div className="icon-content">
                       <img src={vers.img} alt="icon" />
@@ -217,8 +217,8 @@ function CompetencesWindow({
             </div>
             <p className="cat-title soft">Software</p>
             <div className="skill-cat">
-              {software.map((soft) => (
-                <div className="skill" id={soft.id}>
+              {software.map((soft, index) => (
+                <div className="skill" id={index}>
                   <div className="skill-content">
                     <div className="icon-content">
                       <img src={soft.img} alt="icon" />

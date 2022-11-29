@@ -25,7 +25,6 @@ var backgroundImage = {
 
 var backgroundMobile = {
   width: "100%",
-  height: "100vh",
   backgroundImage: `url(${BackgroundMobile})`,
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",

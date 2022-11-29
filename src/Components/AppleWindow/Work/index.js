@@ -12,7 +12,7 @@ const works = [
     img: "./icons/crypto.png",
     color: "#5856d6;",
     tag: "#Web #React JS #API",
-    url: "https://theodaguier.github.io/crypto-tracker/",
+    url: "https://github.com/theodaguier/crypto-tracker",
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ const works = [
     img: "./icons/music.svg",
     color: " #98989d",
     tag: "#Swift #SwiftUI",
-    url: "https://joyful-halva-2c6ff3.netlify.app",
+    url: "https://github.com/theodaguier/Slide_App",
   },
 ];
 

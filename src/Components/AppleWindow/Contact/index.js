@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import Draggable from 'react-draggable';
-import BackButtonContact from '../BackButtonContact';
+import Draggable from "react-draggable";
+import BackButtonContact from "../BackButtonContact";
 
-import Portrait from './img/portrait.png';
+import Portrait from "./img/portrait.png";
 
 const contacts = [
-  { type: 'portable', content: '+330656678583' },
-  { type: 'e-mail', content: 'theo.daguier@icloud.com' },
-  { type: 'domicile', content: 'Paris' },
+  { type: "portable", content: "+330656678583" },
+  { type: "e-mail", content: "theo.daguier@icloud.com" },
+  { type: "domicile", content: "Paris" },
 ];
 
 function ContactPage({
@@ -29,6 +29,7 @@ function ContactPage({
                 <div
                   className="red"
                   onClick={() => setContactWindow(false)}
+                  onTouchEnd={() => setContactWindow(false)}
                 ></div>
                 <div className="orange"></div>
                 <div className="green"></div>
